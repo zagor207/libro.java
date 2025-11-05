@@ -1,5 +1,3 @@
-package libro;
-
 public class Libro {
 
     private String Titolo;
