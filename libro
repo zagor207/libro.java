@@ -1,0 +1,81 @@
+package libro;
+
+public class Libro {
+
+    private String Titolo;
+    private String Autore;
+    private int Pagine;
+    private int Codice;
+    private double Prezzo;
+
+    public Libro() {}
+
+    public Libro(String Titolo, String Autore, int Pagine, int Codice, double Prezzo) {
+        this.Titolo = Titolo;
+        this.Autore = Autore;
+        this.Pagine = Pagine;
+        this.Codice = Codice;
+        this.Prezzo = Prezzo;
+    }
+
+    public void setTitolo(String Titolo) {
+        this.Titolo = Titolo;
+    }
+
+    public void setAutore(String Autore) {
+        this.Autore = Autore;
+    }
+
+    public void setPagine(int Pagine) {
+        this.Pagine = Pagine;
+    }
+
+    public void setCodice(int Codice) {
+        this.Codice = Codice;
+    }
+
+    public void setPrezzo(double Prezzo) {
+        this.Prezzo = Prezzo;
+    }
+
+    public String getTitolo() {
+        return Titolo;
+    }
+
+    public String getAutore() {
+        return Autore;
+    }
+
+    public int getPagine() {
+        return Pagine;
+    }
+
+    public int getCodice() {
+        return Codice;
+    }
+
+    public double getPrezzo() {
+        return Prezzo;
+    }
+
+    public void Stampa() {
+        System.out.println("Il Titolo del libro è: " + Titolo +", scritto da: " + Autore + ", pagine: " + Pagine +", codice: " + Codice +", prezzo: €" + Prezzo);
+    }
+
+    public static void main(String[] args) {
+        Libro libro1 = new Libro("Il Nome della Rosa", "Umberto Eco", 500, 12345, 19.99);  
+        Libro libro2 = new Libro("Amazzonia", "Clive Cussler", 420, 43298, 18.99);
+        Libro libro3 = new Libro();
+
+        
+        libro3.setTitolo("1984");
+        libro3.setAutore("George Orwell");
+        libro3.setPagine(328);
+        libro3.setCodice(98765);
+        libro3.setPrezzo(14.99);
+
+        libro1.Stampa();
+        libro2.Stampa();
+        libro3.Stampa();
+    }
+}
